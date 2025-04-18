@@ -1,0 +1,320 @@
+@import "vars";
+.cart {
+  display: flex;
+  margin-top: 96px;
+  gap: 128px;
+  margin-bottom: 128px;
+}
+
+.cart__products {
+  .cart__product {
+    display: flex;
+    width: 652px;
+    height: 306px;
+    box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+    position: relative;
+    margin-bottom: 40px;
+    &__about {
+      margin: 22px 97px 62px 31px;
+    }
+    &__name {
+      color: rgb(34, 34, 34);
+      font-family: Lato;
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 42px;
+      max-width: 200px;
+    }
+    &__characteristict {
+      font-weight: 400;
+      font-size: 22px;
+      color: #575757;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    &__p {
+      font-family: Lato;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0%;
+    }
+    .red {
+      color: rgb(239, 91, 112);
+    }
+    .gray {
+      color: rgb(111, 110, 110);
+    }
+    &__quantity {
+      width: 44px;
+      height: 25px;
+      padding-left: 16px;
+      box-sizing: border-box;
+    }
+    &__delete {
+      top: 29px;
+      right: 22px;
+      position: absolute;
+      cursor: pointer;
+      background: none;
+      border: none;
+      &:hover {
+        path {
+          fill: $selectColor;
+        }
+      }
+    }
+  }
+  .cart__buttons {
+    display: flex;
+    justify-content: space-between;
+    .cart__button {
+      width: 235px;
+      height: 50px;
+      background: none;
+      color: rgb(0, 0, 0);
+      font-family: Lato;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 17px;
+      letter-spacing: 0%;
+      text-align: center;
+      border: 1px solid rgb(164, 164, 164);
+      box-sizing: border-box;
+      cursor: pointer;
+      &:hover {
+        background-color: $selectColor;
+        transition: 0.3s;
+      }
+      &:not(:hover) {
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.cart__form {
+  margin-top: 17px;
+  &__heading {
+    color: rgb(34, 34, 34);
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+  &__input {
+    border: 1px solid rgb(164, 164, 164);
+    width: 360px;
+    height: 45px;
+    margin-top: 20px;
+    padding-top: 13px;
+    padding-left: 17px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    &::placeholder {
+      color: rgb(177, 177, 177);
+      font-family: Lato;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 16px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    &:focus::placeholder {
+      color: rgb(34, 34, 34);
+      font-family: Lato;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 16px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+  }
+  &__button {
+    border: 1px solid rgb(164, 164, 164);
+    background: none;
+    color: rgb(74, 74, 74);
+    font-family: Lato;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 13px;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 100px;
+    height: 35px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin-top: 24px;
+    cursor: pointer;
+    margin-bottom: 69px;
+    &:active {
+      background-color: $selectColor;
+      transition: 0.3s;
+    }
+  }
+}
+
+.pay {
+  max-width: 360px;
+  min-height: 214px;
+  background: rgb(245, 243, 243);
+  padding: 39px 44px 42px 43px;
+  box-sizing: border-box;
+  &__subtotal {
+    color: rgb(74, 74, 74);
+    font-family: Lato;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0%;
+    text-align: right;
+    margin-bottom: 12px;
+  }
+  &_color {
+    color: $selectColor;
+  }
+  &__grandtotal {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: right;
+    padding-bottom: 21px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    margin-bottom: 17px;
+  }
+  &__button {
+    width: 273px;
+    height: 50px;
+    border: none;
+    background: rgb(241, 109, 127);
+    color: rgb(255, 255, 255);
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: center;
+    padding: 15px 42px;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+      background-color: #575757;
+      color: $selectColor;
+      transition: 0.3s;
+    }
+    &:not(:hover) {
+      transition: 0.3s;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .cart {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 59px;
+  }
+
+  .cart__form {
+    display: flex;
+    gap: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .cart {
+    gap: 48px;
+    margin-bottom: 96px;
+  }
+  .cart__products {
+    .cart__product {
+      display: flex;
+      width: 357px;
+      height: 188px;
+      box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+      position: relative;
+      margin-bottom: 30px;
+      &__about {
+        margin: 14px 56px 38px 17px;
+      }
+      &__name {
+        color: rgb(34, 34, 34);
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        margin-bottom: 25px;
+      }
+      &__characteristict {
+        gap: 4px;
+      }
+      &__p {
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+      }
+      .red {
+        color: rgb(239, 91, 112);
+      }
+      .gray {
+        color: rgb(111, 110, 110);
+      }
+      &__quantity {
+        width: 24px;
+        height: 15px;
+        padding-left: 8px;
+        box-sizing: border-box;
+      }
+      &__delete {
+        top: 29px;
+        right: 22px;
+        position: absolute;
+        cursor: pointer;
+        background: none;
+        border: none;
+        &:hover {
+          path {
+            fill: $selectColor;
+          }
+        }
+      }
+    }
+    .cart__buttons {
+      gap: 9px;
+      .cart__button {
+        width: 175px;
+        height: 33px;
+        background: none;
+        color: rgb(0, 0, 0);
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: center;
+        border: 1px solid rgb(164, 164, 164);
+        box-sizing: border-box;
+        cursor: pointer;
+        &:hover {
+          background-color: $selectColor;
+          transition: 0.3s;
+        }
+        &:not(:hover) {
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  .cart__form {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    &__button {
+      margin-bottom: 48px;
+    }
+  }
+}
